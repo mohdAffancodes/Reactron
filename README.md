@@ -1,6 +1,6 @@
 # Reactron
 
-<h3>Created with Electron,Electron Forge by create-lectron-app</h3>
+<h3>Created with Electron,Electron Forge by create-electron-app</h3>
 <hr>
 <h3>React by webpack</h3>
 
