@@ -1,26 +1,29 @@
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import React from "react";
+import { Route, Switch, Link, useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+//Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Redirect from "./Redirect";
 
 const App = () => {
+   let history = useHistory();
+
+   useEffect(() => {
+      history.push("/");
+   }, []);
+
    return (
       <>
-         <Router>
-            <Redirect />
-            <Link to="/">Home</Link>
-            <br />
-            <Link to="/about">About</Link>
-            <Switch>
-               <Route exact path="/">
-                  <Home />
-               </Route>
-               <Route exact path="/about">
-                  <About />
-               </Route>
-            </Switch>
-         </Router>
+         <Link to="/">Home</Link>
+         <br />
+         <Link to="/about">About</Link>
+         <Switch>
+            <Route exact path="/">
+               <Home />
+            </Route>
+            <Route exact path="/about">
+               <About />
+            </Route>
+         </Switch>
       </>
    );
 };
