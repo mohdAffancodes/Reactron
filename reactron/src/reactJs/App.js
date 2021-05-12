@@ -1,16 +1,10 @@
-import { Route, Switch, Link, useHistory } from "react-router-dom";
-import React, { useEffect } from "react";
+import { Route, Switch, Link } from "react-router-dom";
+import React from "react";
 //Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 
 const App = () => {
-   let history = useHistory();
-
-   useEffect(() => {
-      history.push("/");
-   }, []);
-
    return (
       <>
          <Link to="/">Home</Link>
